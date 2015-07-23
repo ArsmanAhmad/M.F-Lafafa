@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DataBase" Class="LoginDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\DataBase.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DataBaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Login" Member="Logins">
+    <Type Name="Login">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Record" Member="Records">
+    <Type Name="Record">
+      <Column Name="orderNo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="billNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="large" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="small" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="zone" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="date" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
